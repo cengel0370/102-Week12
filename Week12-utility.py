@@ -17,3 +17,7 @@ def LoadFile(file_name):
             else:
                 temp_list.append(i)
         return temp_list
+
+def UpdateString(string1, string2, index):
+    updated = string1[:index] + string2 + string1[index + 1:]
+    print('OUTPUT', updated)
