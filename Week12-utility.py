@@ -5,3 +5,15 @@
 #Functions
 def PrintOutput(print_str):
     print('OUTPUT %s' % str(print_str))
+
+def LoadFile(file_name):
+    with open(file_name, 'r') as open_file:
+        read_file = open_file.readlines()
+        temp_list = []
+        for i in read_file:
+            if i.endswith('\n'):
+                i = i[:-1]
+                temp_list.append(i)
+            else:
+                temp_list.append(i)
+        return temp_list
