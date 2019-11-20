@@ -20,4 +20,16 @@ def LoadFile(file_name):
 
 def UpdateString(string1, string2, index):
     updated = string1[:index] + string2 + string1[index + 1:]
-    print('OUTPUT', updated)
+    PrintOutput(updated)
+
+def FindWordCount(initial_list, substring):
+    count = 0
+    comb_string = ''
+    for i in initial_list:
+        comb_string += ' '
+        comb_string += i
+    for i in comb_string.split():
+        if substring.lower() in i.lower():
+            count += 1
+            
+    return count
