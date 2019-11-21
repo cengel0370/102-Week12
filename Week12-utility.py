@@ -60,6 +60,14 @@ def Intersection(list1, list2):
                 list_final.append(y)
 
     return list_final
+
+def NotIn(list1, list2):
+    list_final = []
+    for i in list2:
+        for y in list1:
+            if y == i:
+                list1.remove(y)
+    return list1
     
     
 
