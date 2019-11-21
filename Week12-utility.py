@@ -44,6 +44,13 @@ def ScoreFinder(list1, list2, name):
     else:
         final = str(list1[index]) + ' got a score of ' + str(list2[index])
         PrintOutput(final)
+
+def Union(list1, list2):
+    for i in list2:
+        for y in list1:
+            if y == i:
+                list1.remove(y)
+    return list1 + list2
     
     
 
